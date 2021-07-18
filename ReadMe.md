@@ -50,3 +50,8 @@ If you like or are using this project to learn or start your solution, please gi
     - High Demand on job market</pre></td>
   </tr>
 </table>
+
+### Not Best For
+
+* Building real-time applications >> NodeJS
+* AI and ML >> Python
