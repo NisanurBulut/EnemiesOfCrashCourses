@@ -14,7 +14,38 @@ If you like or are using this project to learn or start your solution, please gi
 
 ### Crash Course PHP Overview
 
-![Crash Course PHP Overview](https://github.com/NisanurBulut/EnemiesOfCrashCourses/blob/master/Assets/overview.png)
+<table>
+  <tr>
+    <td><pre>
+    - Explain what is PHP
+    - And why you should learn
+    - Download and setup: (Editor, Server)
+    - Output "Hello world"
+    - Comments
+    - Variables & Data Types
+    - Number/String functions
+    - Arrays, array/functions
+    - Conditionals: if, else, switch
+    - Loops: for, while, do-while
+    - Functions
+    - Including files    </pre>
+    </td>
+    <td><pre>
+    - Working with file system
+    - OOP
+    - Curl
+    - Avatar CRUD (bad, better and good code)
+      - Super globals: $_GET, $_POST, &_FILES
+      - Form calidations
+      - Uploading image
+      - Working with file system
+      - Mysql
+    - Namespaces, autoloading, Composer
+    - Custom router (MVC FrameWork)
+    - Sessions, Cookies
+    </pre></td>
+  </tr>
+</table>
 
 ### What is PHP ?
 - PHP: HyperText Preprocessor
