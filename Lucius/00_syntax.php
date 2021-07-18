@@ -14,6 +14,7 @@ echo "<br>";
 ?>
 <?php
 echo "Hello from another tag !!";
+echo '<button>Click Me, Im a Button</button>';
 ?>
 </body>
 </html>
