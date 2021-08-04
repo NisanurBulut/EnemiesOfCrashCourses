@@ -2,7 +2,7 @@
     "name": "z004cmtp/lucius",
     "autoload": {
         "psr-4": {
-            "Z004cmtp\\Lucius\\": "src/"
+            "app\\": "./app"
         }
     },
     "authors": [
