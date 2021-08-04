@@ -1,0 +1,15 @@
+{
+    "name": "z004cmtp/lucius",
+    "autoload": {
+        "psr-4": {
+            "Z004cmtp\\Lucius\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nisanur Bulut",
+            "email": "nisanurrunasin@gmail.com"
+        }
+    ],
+    "require": {}
+}
