@@ -88,3 +88,9 @@ If you like or are using this project to learn or start your solution, please gi
 
 * Building real-time applications >> NodeJS
 * AI and ML >> Python
+
+# Installation
+- composer require guzzlehttp/guzzle
+  
+# Helpfull Websites
+[packagist.org](https://packagist.org/)

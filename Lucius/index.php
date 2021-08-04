@@ -1,3 +1,3 @@
-<?php include_once "views/partials/header.php";
-require_once  "core/database.php";
+<?php 
+require_once "vendor/autoload.php";
 ?>
