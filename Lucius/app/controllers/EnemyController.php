@@ -8,6 +8,9 @@ class EnemyController
 {
     public function index(Router $router)
     {
-        $router->renderView('enemies/index');
+        $enemies = $router->db->getEnemies();
+        $router->renderView('enemies/index', [
+            'enemies' => $enemies
+        ]);
     }
 }
