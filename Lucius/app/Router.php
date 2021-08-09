@@ -30,9 +30,14 @@ class Router
         }
 
         if ($fn) {
-            call_user_func($fn);
+            call_user_func($fn, $this);
         } else {
             echo 'Page Not Found';
         }
+    }
+
+    public function renderView($view)
+    {
+        include_once __DIR__ . "/views/$view.php";
     }
 }

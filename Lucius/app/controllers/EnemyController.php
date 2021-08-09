@@ -2,10 +2,12 @@
 
 namespace app\controllers;
 
+use app\Router;
+
 class EnemyController
 {
-    public function index()
+    public function index(Router $router)
     {
-        echo 'EnemyController index';
+        $router->renderView('enemies/index');
     }
 }
