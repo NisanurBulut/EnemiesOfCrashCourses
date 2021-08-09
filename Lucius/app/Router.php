@@ -24,9 +24,15 @@ class Router
         $currentUrl = $_SERVER['PATH_INFO'] ?? '/';
         $method = $_SERVER['REQUEST_METHOD'];
         if ($method === 'GET') {
-            $fn = getRoutes[$currentUrl] ?? null;
+            $fn = $this->getRoutes[$currentUrl] ?? null;
         } else if ($method === 'POST') {
             $fn = $this->postRoutes[$currentUrl] ?? null;
+        }
+
+        if ($fn) {
+            call_user_func($fn);
+        } else {
+            echo 'Page Not Found';
         }
     }
 }
