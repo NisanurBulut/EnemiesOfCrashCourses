@@ -1,20 +1,19 @@
 <?php
 
-require_once  __DIR__.'/vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 use app\Router;
-use app\controllers\MainController;
+use app\controllers\EnemyController;
 
 
 $router = new Router();
 
-$router->get('/',[MainController::class,'index']);
-$router->get('/enemies',[MainController::class,'index']);
-$router->get('/enemies/create',[MainController::class,'create']);
-$router->post('/enemies/create',[MainController::class,'create']);
-$router->get('/enemies/update',[MainController::class,'update']);
-$router->post('/enemies/update',[MainController::class,'update']);
-$router->post('/enemies/delete',[MainController::class,'delete']);
+$router->get('/', [EnemyController::class, 'index']);
+$router->get('/enemies', [EnemyController::class, 'index']);
+$router->get('/enemies/create', [EnemyController::class, 'create']);
+$router->post('/enemies/create', [EnemyController::class, 'create']);
+$router->get('/enemies/update', [EnemyController::class, 'update']);
+$router->post('/enemies/update', [EnemyController::class, 'update']);
+$router->post('/enemies/delete', [EnemyController::class, 'delete']);
 
 $router->resolve();
-?>
