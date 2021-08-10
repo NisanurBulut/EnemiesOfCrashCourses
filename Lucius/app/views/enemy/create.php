@@ -1,1 +1,2 @@
-<h1>Create</h1>
+<h1>Create new product</h1>
+<?php include "../shared/form.php"; ?>
