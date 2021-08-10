@@ -26,19 +26,19 @@ class Router
 
     public function resolve()
     {
-        $currentUrl = $_SERVER['PATH_INFO'] ?? '/';
-        $method = $_SERVER['REQUEST_METHOD'];
-        if ($method === 'GET') {
-            $fn = $this->getRoutes[$currentUrl] ?? null;
-        } else if ($method === 'POST') {
-            $fn = $this->postRoutes[$currentUrl] ?? null;
-        }
+        $method = strtolower($_SERVER['REQUEST_METHOD']);
+        $url = $_SERVER['PATH_INFO'] ?? '/';
 
-        if ($fn) {
-            call_user_func($fn, $this);
+        if ($method === 'get') {
+            $fn = $this->getRoutes[$url] ?? null;
         } else {
-            echo 'Page Not Found';
+            $fn = $this->postRoutes[$url] ?? null;
         }
+        if (!$fn) {
+            echo 'Page not found';
+            exit;
+        }
+        echo call_user_func($fn, $this);
     }
 
     public function renderView($view, $params = [])
