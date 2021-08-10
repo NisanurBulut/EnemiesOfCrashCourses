@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\Router;
+
 class EnemyController
 {
     public function index(Router $router)
