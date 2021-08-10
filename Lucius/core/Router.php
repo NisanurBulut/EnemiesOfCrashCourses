@@ -1,19 +1,20 @@
 <?php
 
-namespace app;
+
+namespace app\core;
+use app\core\Database;
 
 class Router
 {
 
     public array $getRoutes = [];
     public array $postRoutes = [];
-    public Database $db;
+    public ?Database $database = null;
 
     public function __construct()
     {
-        $this->db = new Database();
+        $this->database = new Database();
     }
-
     public function get($url, $fn)
     {
         $this->getRoutes[$url] = $fn;
@@ -49,8 +50,8 @@ class Router
         }
 
         ob_start();
-        include_once __DIR__ . "/views/$view.php";
+        include_once __DIR__ . "/../views/enemy/$view.php";
         $content = ob_get_clean();
-        include_once __DIR__ . "/views/shared/_layout.php";
+        include_once __DIR__ . "../views/shared/_layout.php";
     }
 }

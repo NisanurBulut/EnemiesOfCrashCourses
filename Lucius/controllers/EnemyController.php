@@ -2,14 +2,14 @@
 
 namespace app\controllers;
 
-use app\Router;
+use app\core\Router;
 
 class EnemyController
 {
-    public function index(Router $router)
+    public static function index(Router $router)
     {
         $keyword = $_GET['search'] ?? '';
-        $enemies = $router->database->getEnemys($keyword);
+        $enemies = $router->database->getEnemies($keyword);
         $router->renderView('enemies/index', [
             'enemies' => $enemies,
             'keyword' => $keyword

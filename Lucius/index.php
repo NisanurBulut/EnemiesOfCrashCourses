@@ -1,12 +1,14 @@
 <?php
 
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . './vendor/autoload.php';
 
-use app\Router;
 use app\controllers\EnemyController;
+use app\core\Router;
+use app\core\Database;
 
 
-$router = new Router();
+$database = new Database();
+$router = new Router($database);
 
 $router->get('/', [EnemyController::class, 'index']);
 $router->get('/enemies', [EnemyController::class, 'index']);

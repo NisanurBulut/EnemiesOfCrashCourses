@@ -1,10 +1,9 @@
 <?php
 
+namespace app\core;
 
-namespace app;
-
-use PDO;
 use app\models\Enemy;
+use PDO;
 
 class Database
 {
@@ -18,7 +17,7 @@ class Database
         self::$db = $this;
     }
 
-    public function getEnemys($keyword = '')
+    public function getEnemies($keyword = '')
     {
         if ($keyword) {
             $statement = $this->pdo->prepare('SELECT * FROM tEnemy WHERE name like :keyword ORDER BY create_date DESC');
