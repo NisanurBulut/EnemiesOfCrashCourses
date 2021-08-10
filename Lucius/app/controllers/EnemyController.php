@@ -21,9 +21,9 @@ class EnemyController
             'image' => ''
         ];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $enemyData['title'] = $_POST['title'];
+            $enemyData['name'] = $_POST['name'];
             $enemyData['description'] = $_POST['description'];
-            $enemyData['price'] = $_POST['price'];
+            $enemyData['movie'] = $_POST['movie'];
             $enemyData['imageFile'] = $_FILES['image'] ?? null;
 
             $enemy = new Enemy();
@@ -47,9 +47,9 @@ class EnemyController
         $enemyData = $router->database->getEnemyById($id);
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $enemyData['title'] = $_POST['title'];
+            $enemyData['namw'] = $_POST['name'];
             $enemyData['description'] = $_POST['description'];
-            $enemyData['price'] = $_POST['price'];
+            $enemyData['movie'] = $_POST['movie'];
             $enemyData['imageFile'] = $_FILES['image'] ?? null;
 
             $enemy = new Enemy();
