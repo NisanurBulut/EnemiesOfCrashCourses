@@ -11,7 +11,7 @@ class Database
 
     public function __construct()
     {
-        $this->pdo = new PDO('mysql:host=localhost;port:3306;dbname=dbsonofaltar');
+        $this->pdo = new PDO('mysql:host=127.0.0.1;user=root;dbname=dbsonofaltar');
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
