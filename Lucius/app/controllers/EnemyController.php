@@ -47,7 +47,7 @@ class EnemyController
         $enemyData = $router->database->getEnemyById($id);
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $enemyData['namw'] = $_POST['name'];
+            $enemyData['name'] = $_POST['name'];
             $enemyData['description'] = $_POST['description'];
             $enemyData['movie'] = $_POST['movie'];
             $enemyData['imageFile'] = $_FILES['image'] ?? null;
