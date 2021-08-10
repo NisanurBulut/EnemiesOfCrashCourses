@@ -17,7 +17,7 @@
         <th scope="col">#</th>
         <th scope="col">Image</th>
         <th scope="col">Name</th>
-        <th scope="col">Moview</th>
+        <th scope="col">Movie</th>
         <th scope="col">Create Date</th>
         <th scope="col">Actions</th>
     </tr>

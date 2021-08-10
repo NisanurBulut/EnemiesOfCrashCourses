@@ -1,3 +1,3 @@
-<h1>Update product</h1>
+<h1>Update enemy</h1>
 
 <?php include "../shared/form.php"; ?>
