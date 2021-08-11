@@ -1,7 +1,7 @@
 <h1>Enemy List</h1>
 
 <p>
-    <a href="/enemies/create" type="button" class="btn btn-sm btn-success">Add Enemy</a>
+    <a href="/enemy/create" type="button" class="btn btn-sm btn-success">Add Enemy</a>
 </p>
 <form action="" method="get">
     <div class="input-group mb-3">

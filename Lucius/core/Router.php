@@ -27,6 +27,7 @@ class Router
 
     public function resolve()
     {
+
         $method = strtolower($_SERVER['REQUEST_METHOD']);
         $url = $_SERVER['PATH_INFO'] ?? '/';
 
@@ -48,10 +49,11 @@ class Router
         foreach ($params as $key => $value) {
             $$key = $value;
         }
-
+        echo  __DIR__ . "/../views/enemy/$view.php";
         ob_start();
-        include_once __DIR__ . "/../views/enemy/$view.php";
+
+        include __DIR__ . "/../views/enemy/$view.php";
         $content = ob_get_clean();
-        include_once __DIR__ . "../views/shared/_layout.php";
+        include __DIR__ . "/../views/shared/_layout.php";
     }
 }

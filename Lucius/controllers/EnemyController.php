@@ -10,7 +10,7 @@ class EnemyController
     {
         $keyword = $_GET['search'] ?? '';
         $enemies = $router->database->getEnemies($keyword);
-        $router->renderView('enemies/index', [
+        $router->renderView('/index', [
             'enemies' => $enemies,
             'keyword' => $keyword
         ]);
@@ -30,10 +30,10 @@ class EnemyController
             $enemy = new Enemy();
             $enemy->load($enemyData);
             $enemy->save();
-            header('Location: /enemies');
+            header('Location: /enemy');
             exit;
         }
-        $router->renderView('enemies/create', [
+        $router->renderView('/create', [
             'enemy' => $enemyData
         ]);
     }
@@ -42,7 +42,7 @@ class EnemyController
     {
         $id = $_GET['id'] ?? null;
         if (!$id) {
-            header('Location: /enemies');
+            header('Location: /enemy');
             exit;
         }
         $enemyData = $router->database->getEnemyById($id);
@@ -56,11 +56,11 @@ class EnemyController
             $enemy = new Enemy();
             $enemy->load($enemyData);
             $enemy->save();
-            header('Location: /enemies');
+            header('Location: /enemy');
             exit;
         }
 
-        $router->renderView('enemies/update', [
+        $router->renderView('/update', [
             'enemy' => $enemyData
         ]);
     }
