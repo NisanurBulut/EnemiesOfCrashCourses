@@ -15,10 +15,7 @@ class EnemyController
             'keyword' => $keyword
         ]);
     }
-    public static function create(Router $router)
-    {
-        $router->renderView('enemy/create');
-    }
+
     public static function store(Router $router)
     {
         $enemyData = [

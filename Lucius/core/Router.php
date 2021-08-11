@@ -30,7 +30,7 @@ class Router
 
         $method = strtolower($_SERVER['REQUEST_METHOD']);
         $url = $_SERVER['PATH_INFO'] ?? '/';
-
+echo  $url;
         if ($method === 'get') {
             $fn = $this->getRoutes[$url] ?? null;
         } else {
@@ -41,6 +41,7 @@ class Router
             exit;
         }
 
+        echo var_dump($fn);
         echo call_user_func($fn, $this);
     }
 
@@ -49,10 +50,10 @@ class Router
         foreach ($params as $key => $value) {
             $$key = $value;
         }
-        echo  __DIR__ . "/../views/enemy/$view.php";
+        echo $view;
+        echo  var_dump($params);
         ob_start();
-
-        include __DIR__ . "/../views/enemy/$view.php";
+        include __DIR__ . "/../views/$view.php";
         $content = ob_get_clean();
         include __DIR__ . "/../views/shared/_layout.php";
     }
