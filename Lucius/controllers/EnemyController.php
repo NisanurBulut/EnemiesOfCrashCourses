@@ -10,13 +10,16 @@ class EnemyController
     {
         $keyword = $_GET['search'] ?? '';
         $enemies = $router->database->getEnemies($keyword);
-        $router->renderView('/index', [
+        $router->renderView('enemy/index', [
             'enemies' => $enemies,
             'keyword' => $keyword
         ]);
     }
-
-    public function create(Router $router)
+    public static function create(Router $router)
+    {
+        $router->renderView('enemy/create');
+    }
+    public static function store(Router $router)
     {
         $enemyData = [
             'image' => ''
@@ -38,7 +41,7 @@ class EnemyController
         ]);
     }
 
-    public function update(Router $router)
+    public static function update(Router $router)
     {
         $id = $_GET['id'] ?? null;
         if (!$id) {
@@ -65,7 +68,7 @@ class EnemyController
         ]);
     }
 
-    public function delete(Router $router)
+    public static function delete(Router $router)
     {
         $id = $_POST['id'] ?? null;
         if (!$id) {
