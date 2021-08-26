@@ -1,6 +1,6 @@
 <?php
 
-namespace app\core;
+namespace app;
 
 use app\models\Enemy;
 use PDO;

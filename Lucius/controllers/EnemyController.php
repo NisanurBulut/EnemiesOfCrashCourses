@@ -2,7 +2,7 @@
 
 namespace app\controllers;
 
-use app\core\Router;
+use app\Router;
 
 class EnemyController
 {
@@ -16,7 +16,7 @@ class EnemyController
         ]);
     }
 
-    public static function store(Router $router)
+    public function create(Router $router)
     {
         $enemyData = [
             'image' => ''

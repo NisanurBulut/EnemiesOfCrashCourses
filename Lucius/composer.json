@@ -1,5 +1,5 @@
 {
-    "name": "z004cmtp/lucius",
+    "name": "nisanur/lucius",
     "autoload": {
         "psr-4": {
             "app\\": "./"

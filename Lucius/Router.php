@@ -1,8 +1,9 @@
 <?php
 
 
-namespace app\core;
-use app\core\Database;
+namespace app;
+
+use app\controllers\EnemyController;
 
 class Router
 {
@@ -30,7 +31,7 @@ class Router
 
         $method = strtolower($_SERVER['REQUEST_METHOD']);
         $url = $_SERVER['PATH_INFO'] ?? '/';
-echo  $url;
+
         if ($method === 'get') {
             $fn = $this->getRoutes[$url] ?? null;
         } else {
@@ -40,9 +41,14 @@ echo  $url;
             echo 'Page not found';
             exit;
         }
+        // echo call_user_func($fn, $this);
 
-        echo var_dump($fn);
-        echo call_user_func($fn, $this);
+        if($fn) {
+            $enemyController = new EnemyController();
+            call_user_func($fn, $this);
+        } else {
+            echo "404 ! Page not Found";
+        }
     }
 
     public function renderView($view, $params = [])
@@ -50,11 +56,10 @@ echo  $url;
         foreach ($params as $key => $value) {
             $$key = $value;
         }
-        echo $view;
-        echo  var_dump($params);
+
         ob_start();
-        include __DIR__ . "/../views/$view.php";
+        include __DIR__ ."/views/$view.php";
         $content = ob_get_clean();
-        include __DIR__ . "/../views/shared/_layout.php";
+        include __DIR__ . "/views/shared/_layout.php";
     }
 }
