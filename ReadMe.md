@@ -8,7 +8,7 @@ If you like or are using this project to learn or start your solution, please gi
 </br></br></br></br></br></br></br>
 <hr>
 
-## 1. Licius
+## 1. Lucius
 <img style="border-radius: 50%;" align="left" width="100" height="100" src="https://github.com/NisanurBulut/EnemiesOfCrashCourses/blob/master/Assets/lucius.png"><p>He can be considered the most honorable person among Tarkan's enemies. Like Tarkan, he is after the Sword of Mars.</p></br></br></br>
 
 
