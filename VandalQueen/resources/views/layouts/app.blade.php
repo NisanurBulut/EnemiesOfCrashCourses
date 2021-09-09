@@ -18,7 +18,7 @@
             <li><a class="p-3" href="">Nisanur Bulut</a></li>
             <li><a class="p-3" href="">Login</a></li>
             <li><a class="p-3" href="">Register</a></li>
-            <li><a class="p-3" href="">Logout</a></li>
+            <li><a class="p-3" href="{{ route('register')}}">Logout</a></li>
         </ul>
     </nav>
 @yield('content')
