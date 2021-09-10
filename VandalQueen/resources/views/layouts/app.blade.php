@@ -14,7 +14,7 @@
         <ul class="flex items-center">
             <li><a class="p-3" href="/">Home</a></li>
             <li><a class="p-3" href="{{route('dashboard')}}">Dashboard</a></li>
-            <li><a class="p-3" href="">Post</a></li>
+            <li><a class="p-3" href="{{route('posts')}}">Post</a></li>
         </ul>
         <ul class="flex items-center">
             @auth
