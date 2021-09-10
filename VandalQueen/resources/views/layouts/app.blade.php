@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Vandal Queen</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
+
 <body class="bg-gray-200">
     <nav class="p-6 bg-white flex justify-between mb-6">
         <ul class="flex items-center">
@@ -17,14 +19,15 @@
         <ul class="flex items-center">
             @auth
             <li><a class="p-3" href="">Nisanur Bulut</a></li>
-            <li><a class="p-3" href="">Logout</a></li>
+            <li><a class="p-3" href="{{route('logout')}}">Logout</a></li>
             @endauth
             @guest
-            <li><a class="p-3" href="">Login</a></li>
+            <li><a class="p-3" href="{{route('login')}}">Login</a></li>
             <li><a class="p-3" href="{{ route('register')}}">Register</a></li>
             @endguest
         </ul>
     </nav>
-@yield('content')
+    @yield('content')
 </body>
+
 </html>
