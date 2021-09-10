@@ -15,10 +15,14 @@
             <li><a class="p-3" href="">Post</a></li>
         </ul>
         <ul class="flex items-center">
+            @auth
             <li><a class="p-3" href="">Nisanur Bulut</a></li>
+            <li><a class="p-3" href="">Logout</a></li>
+            @endauth
+            @guest
             <li><a class="p-3" href="">Login</a></li>
-            <li><a class="p-3" href="">Register</a></li>
-            <li><a class="p-3" href="{{ route('register')}}">Logout</a></li>
+            <li><a class="p-3" href="{{ route('register')}}">Register</a></li>
+            @endguest
         </ul>
     </nav>
 @yield('content')
