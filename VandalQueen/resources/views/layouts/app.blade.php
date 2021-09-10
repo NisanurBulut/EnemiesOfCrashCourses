@@ -18,7 +18,7 @@
         </ul>
         <ul class="flex items-center">
             @auth
-            <li><a class="p-3" href="">Nisanur Bulut</a></li>
+            <li><a class="p-3" href="">{{ auth()->user()->username}}</a></li>
             <li>
                 <form method="POST" class="inline p-3" action="{{route('logout')}}">
                     @csrf
