@@ -23,6 +23,11 @@ class PostController extends Controller
         $request->user()->posts()->create($request->only('body'));
         return back();
     }
+    public function show(Post $post) {
+        return view('posts.show', [
+            "post" => $post
+        ]);
+    }
     public function destroy(Post $post) {
         $this->authorize('delete', $post);
         $post->delete();
