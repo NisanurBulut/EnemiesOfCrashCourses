@@ -25,7 +25,7 @@
 
             @if ($posts->count())
                 @foreach ($posts as $post)
-                    <x-post :post="$post" />
+                    <x-post-item :post="$post" />
                 @endforeach
 
                 {{ $posts->links() }}
