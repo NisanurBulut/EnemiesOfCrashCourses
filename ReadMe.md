@@ -91,6 +91,7 @@ If you like or are using this project to learn or start your solution, please gi
 
 # Installation
 - composer require guzzlehttp/guzzle
+- composer require barryvdh/laravel-debugbar --dev
   
 # Helpfull Websites
 [packagist.org](https://packagist.org/)
