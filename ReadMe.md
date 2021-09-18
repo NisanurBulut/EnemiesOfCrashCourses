@@ -89,6 +89,21 @@ If you like or are using this project to learn or start your solution, please gi
 * Building real-time applications >> NodeJS
 * AI and ML >> Python
 
+
+## 2. Vandal Queen
+<img style="border-radius: 50%;" align="left" width="100" height="100" src="https://github.com/NisanurBulut/EnemiesOfCrashCourses/blob/master/Assets/vandalQueen.jpg"><p>VandalQueen is one of Tarkan's insidious enemies. She took part in the <b>Tarkan Gold Medallion</b> movie. Kartal Tibet played the character of Tarkan in this film, which is the fourth film in the Tarkan series, as in other films. She is a dancer by night and a queen by day.</p></br></br></br>
+
+With this study, practice has been made about the following operations on Laravel:
+- Mail sending (mailtrap)
+- Migration usage
+- Component usage
+- Authorize structure
+- Middleware concept
+- Raouting operations
+- Parameter transfer to View
+
+![VandalQueen](https://github.com/NisanurBulut/EnemiesOfCrashCourses/blob/master/Assets/Trailer_VandalQueen.gif)
+
 # Installation
 - composer require guzzlehttp/guzzle
 - composer require barryvdh/laravel-debugbar --dev
