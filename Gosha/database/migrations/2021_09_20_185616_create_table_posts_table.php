@@ -13,7 +13,7 @@ class CreateTablePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('table_posts', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->text('excerpt');
             $table->text('title');
