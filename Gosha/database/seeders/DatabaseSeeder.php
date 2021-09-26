@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +14,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         \App\Models\User::factory(10)->create();
+         $user=User::factory(10)->create();
+
+         Category::create([
+             'name'=>'Personel',
+             'slug'=>'personel'
+         ]);
+        Category::create([
+            'name'=>'Family',
+            'slug'=>'family'
+        ]);
+        Category::create([
+            'name'=>'Work',
+            'slug'=>'work'
+        ]);
     }
 }
