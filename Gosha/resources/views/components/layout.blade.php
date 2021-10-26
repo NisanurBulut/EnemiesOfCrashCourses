@@ -23,22 +23,7 @@
         </div>
     </nav>
 
-@include('_posts-header');
-
-    <main class="max-w-6xl mx-auto mt-6 lg:mt-20 space-y-6">
-      <x-post-featured-card></x-post-featured-card>
-
-        <div class="lg:grid lg:grid-cols-2">
-            <x-post-card></x-post-card>
-            <x-post-card></x-post-card>
-        </div>
-
-        <div class="lg:grid lg:grid-cols-3">
-            <x-post-card></x-post-card>
-            <x-post-card></x-post-card>
-            <x-post-card></x-post-card>
-        </div>
-    </main>
+    <x-posts></x-posts>
 
     <footer class="bg-gray-100 border border-black border-opacity-5 rounded-xl text-center py-16 px-10 mt-16">
         <img src="./images/lary-newsletter-icon.svg" alt="" class="mx-auto -mb-6" style="width: 145px;">
