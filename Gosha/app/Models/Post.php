@@ -10,6 +10,7 @@ class Post extends Model
     use HasFactory;
     protected $guarded=[];
     protected  $fillable=['title','excerpt','body','published_ad'];
+    protected $with = ['category','author'];
     public function category() {
         return $this->belongsTo(Category::class);
     }
